@@ -189,13 +189,16 @@ module.exports = (auth, url_base='https://api.clever.com', options={}) ->
     @path: '/v1.2/teachers'
   class Event extends Resource
     @path: '/v1.2/events'
-
+  class Contacts extends Resource
+    @path: '/v1.2/contacts'
+    
   _(clever).extend
     Resource : Resource
     District : District
     School   : School
     Section  : Section
     Student  : Student
+    Contacts  : Contacts
     Teacher  : Teacher
     Event    : Event
     Query    : Query
